@@ -29,9 +29,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 18%;
+  flex: 1 1 198px;
   height: 400px;
   text-align: center;
+
+  max-width: 400px;
+  margin: 40px 0;
 }
 
 .cardCenter h2 {
@@ -49,4 +52,15 @@
 .cardCenter p {
   height: 50%;
   font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cardCenter h2 {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  .cardCenter {
+    min-height: fit-content;
+  }
 }
