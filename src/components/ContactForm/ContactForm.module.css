@@ -1,0 +1,74 @@
+.contact {
+  background-color: #f8ecde;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  margin: auto;
+}
+
+.damageContainer {
+  width: 50%;
+}
+
+.damageContainer h2 {
+  font-size: 58px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.damageContainer p {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.submitter {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  background-color: #cfa782;
+  border-radius: 15px;
+}
+
+.submitter label {
+  font-size: 18px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+/* .submitterLabel {
+  border-radius: 15px;
+  background-color: #205346;
+  color: #f8ecde;
+} */
+
+.submitterActiveLabel {
+  border-radius: 15px;
+  background-color: #205346;
+  color: #f8ecde;
+}
+.attachedFiles {
+  display: none;
+}
+
+.attachLabel {
+  background-color: #cfa782;
+  padding: 5px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.radio {
+  display: none;
+}

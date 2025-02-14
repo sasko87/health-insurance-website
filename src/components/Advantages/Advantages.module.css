@@ -1,0 +1,32 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8ecde;
+
+  padding-top: 20px;
+}
+
+.advantagesContainer {
+  display: flex;
+  padding: 50px 150px;
+  align-items: center;
+  gap: 100px;
+}
+
+.advantagesContainer img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.advantagesContainer h2 {
+  font-size: 60px;
+  line-height: 90%;
+}
+
+.advantagesContainer p {
+  font-size: 18px;
+}
+
+.advantagesContainer div {
+  width: 50%;
+}

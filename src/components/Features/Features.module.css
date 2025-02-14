@@ -1,0 +1,27 @@
+.features {
+  background-color: #f8ecde;
+  height: 100vh;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.horizontalCards {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.verticalCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 100px;
+  width: 100%;
+}

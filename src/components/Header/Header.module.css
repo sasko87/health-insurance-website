@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #fff;
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.mainLogo {
+  width: 130px;
+  cursor: pointer;
+}
+
+.navItems {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 20px;
+}
+
+.navItem {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navItem:hover {
+  transition: 0.5s;
+  color: #02928e;
+}
+
+.activeItem {
+  color: #02928e;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.mainButton {
+  background-color: #0e5645;
+  color: #fff;
+}
+
+.secButton {
+  background-color: #f8ecde;
+  color: #0e5645;
+}
+
+.secButton:hover {
+  transition: 0.5s;
+  background-color: #fcf6ef;
+}
+
+.mainButton:hover {
+  transition: 0.5s;
+  background-color: #266758;
+}

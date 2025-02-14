@@ -1,0 +1,40 @@
+.heroLeft {
+  align-self: flex-end;
+  width: 48%;
+}
+
+.heroRightImg {
+  display: none;
+}
+
+.heroImg {
+  width: 48vw;
+  height: 80vh;
+  object-fit: fill;
+}
+
+.titles {
+  width: 45%;
+  align-self: flex-start;
+  margin-top: 70px;
+}
+
+.titles h1 {
+  font-size: 58px;
+  line-height: 60px;
+  color: #fdfefe;
+  font-weight: bold;
+}
+
+.titles p {
+  font-size: 20px;
+  line-height: 120%;
+  color: #b0c1b6;
+}
+
+.plant {
+  position: absolute;
+  bottom: 43px;
+  right: 100px;
+  width: 150px;
+}

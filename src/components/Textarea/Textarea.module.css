@@ -1,0 +1,12 @@
+.textarea {
+  padding: 12px;
+  border-radius: 15px;
+  outline: none;
+  border: 2px solid #cfa782;
+  height: 200px;
+  resize: none;
+}
+
+.textarea:focus {
+  border: 2px solid #205346;
+}

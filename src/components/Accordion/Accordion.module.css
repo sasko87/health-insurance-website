@@ -1,0 +1,34 @@
+.accordion {
+  background-color: #f8ecde;
+  margin: 0;
+  padding: 50px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.question:hover {
+  color: #205346;
+}
+
+.activeQuestion {
+  color: #205346;
+  font-weight: bold;
+}
+.faqContainer {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.answer p {
+  margin-top: 0px;
+  margin-bottom: 25px;
+  width: 760px;
+  font-size: 18px;
+}

@@ -1,0 +1,17 @@
+.titles {
+  width: 45%;
+  align-self: flex-start;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 400px;
+}
+
+.heroImg {
+  width: 45%;
+}
+
+.heroImg img {
+  border-radius: 15px;
+  width: 100%;
+}
