@@ -11,9 +11,16 @@
   min-height: fit-content;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .featuresCard {
     flex-direction: column;
     padding: 0 20px;
   }
 }
+
+/* @media screen and (max-width: 600px) {
+  .featuresCard {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+} */
