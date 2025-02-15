@@ -1,0 +1,39 @@
+.blogPostCard {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  max-width: 335px;
+  margin: 40px 20px;
+  width: 25%;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.imgContainer img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px;
+}
+
+.linkContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.titleContainer {
+  padding: 15px;
+}
+
+.titleContainer h2 {
+  margin: 10px 0;
+}
+.titleContainer p {
+  margin: 10px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #205346;
+}

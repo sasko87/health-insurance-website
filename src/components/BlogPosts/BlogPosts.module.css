@@ -1,0 +1,6 @@
+.blogPosts {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8ecde;
+  padding: 40px 40px;
+}

@@ -62,6 +62,7 @@ const Header = () => {
                 Прашања
               </Link>
             </li>
+
             <li>
               <Link
                 to="/kontakt"
@@ -72,6 +73,18 @@ const Header = () => {
                 }
               >
                 Контакт
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className={
+                  location.pathname.startsWith("/blog")
+                    ? classes.activeItem
+                    : classes.navItem
+                }
+              >
+                Блог
               </Link>
             </li>
             <li>
@@ -127,6 +140,18 @@ const Header = () => {
                 onClick={handleCloseNav}
               >
                 Контакт
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className={
+                  location.pathname.startsWith("/blog")
+                    ? classes.activeItem
+                    : classes.navItem
+                }
+              >
+                Блог
               </Link>
             </li>
             <li>

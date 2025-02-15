@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout.jsx";
 import Questions from "./pages/Questions.jsx";
 import Contact from "./pages/Contact.jsx";
 import Damage from "./pages/Damage.jsx";
+import Blog from "./pages/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/prijavi-steta",
         element: <Damage />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },
