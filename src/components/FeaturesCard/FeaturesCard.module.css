@@ -8,12 +8,12 @@
 
   padding: 40px 40px;
 
-  min-height: 100vh;
+  height: fit-content;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .featuresCard {
     flex-direction: column;
     padding: 0 20px;
   }
-}
+} */
