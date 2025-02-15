@@ -10,7 +10,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 50%;
   justify-content: center;
   gap: 20px;
   position: relative;
@@ -35,7 +35,7 @@
 .submitter {
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 100%;
   background-color: #cfa782;
   border-radius: 15px;
 }
@@ -71,4 +71,16 @@
 }
 .radio {
   display: none;
+}
+
+@media screen and (max-width: 993px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
 }

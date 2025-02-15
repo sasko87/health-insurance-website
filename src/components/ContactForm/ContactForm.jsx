@@ -12,17 +12,6 @@ const ContactForm = ({ damage }) => {
   };
   return (
     <section className={classes.contact}>
-      {damage && (
-        <div className={classes.damageContainer}>
-          <h2>Треба да пријавите штетен настан?</h2>
-          <p>
-            Сега не треба да одите до осигурителната компанија за да го
-            направите тоа. Се што треба да направите е да ја пополните формата
-            подолу и да ја прикачите потребната документација, а брокерите ќе се
-            погрижат за се останато
-          </p>
-        </div>
-      )}
       <form className={classes.form}>
         {damage && (
           <div className={classes.submitter}>
