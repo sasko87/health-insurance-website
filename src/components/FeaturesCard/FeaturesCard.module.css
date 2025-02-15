@@ -1,5 +1,4 @@
 .featuresCard {
-  height: 100vh;
   background-color: #205346;
   display: flex;
   align-items: center;
@@ -8,12 +7,12 @@
 
   padding: 40px 40px;
 
-  height: fit-content;
+  min-height: fit-content;
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .featuresCard {
     flex-direction: column;
     padding: 0 20px;
   }
-} */
+}

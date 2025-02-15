@@ -4,6 +4,7 @@
   background-color: #f8ecde;
 
   padding-top: 20px;
+  min-height: fit-content;
 }
 
 .advantagesContainer {
