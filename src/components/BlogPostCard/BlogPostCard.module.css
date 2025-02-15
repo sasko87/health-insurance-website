@@ -1,10 +1,10 @@
 .blogPostCard {
   display: flex;
   flex-direction: column;
-  flex: 1 1 300px;
+  flex: 1 1 250px;
   max-width: 335px;
   margin: 40px 20px;
-  width: 25%;
+  width: 20%;
   cursor: pointer;
   border-radius: 15px;
   background-color: #fff;
@@ -36,4 +36,19 @@
 .link {
   text-decoration: none;
   color: #205346;
+}
+
+@media screen and (max-width: 600px) {
+  .blogPostCard {
+    max-width: 500px;
+  }
+  .imgContainer img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imgContainer img {
+    height: 200px;
+  }
 }

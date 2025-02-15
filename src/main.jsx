@@ -8,6 +8,7 @@ import Questions from "./pages/Questions.jsx";
 import Contact from "./pages/Contact.jsx";
 import Damage from "./pages/Damage.jsx";
 import Blog from "./pages/Blog.jsx";
+import BlogPost from "./components/BlogPost/BlogPost.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/post/:id",
+        element: <BlogPost />,
       },
     ],
   },
