@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Header.module.css";
 import logoImg from "../../assets/logo.png";
 import Button from "../Button/Button";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const Header = () => {
@@ -65,6 +66,9 @@ const Header = () => {
             <Button onClick={buttonNavigate}>Пријави штета</Button>
           </li>
         </ul>
+      </nav>
+      <nav className={classes.mobileNav}>
+        <GiHamburgerMenu />
       </nav>
     </header>
   );

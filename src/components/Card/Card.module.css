@@ -3,6 +3,10 @@
   height: 280px;
   border: 2px solid #205346;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 250px;
+  margin: 40px;
 }
 
 .card img {
@@ -29,12 +33,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex: 1 1 198px;
+  flex: 1 1 200px;
   height: 400px;
   text-align: center;
-
   max-width: 400px;
-  margin: 40px 0;
+  margin: 40px 20px;
 }
 
 .cardCenter h2 {
@@ -62,5 +65,22 @@
 
   .cardCenter {
     min-height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardCenter {
+    min-width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardCenter {
+    min-width: 80%;
+    padding: 15px;
+  }
+
+  .card {
+    margin: 40px 20px;
   }
 }

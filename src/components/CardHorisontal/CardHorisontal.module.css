@@ -1,9 +1,10 @@
 .card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 25%;
+  justify-content: left;
+  flex: 1 1 0;
+  margin: 10px 40px;
+  min-width: 210px;
 }
 
 .card img {
@@ -18,4 +19,5 @@
   font-size: 17px;
   color: #8d8d83;
   line-height: 165%;
+  margin-left: 20px;
 }

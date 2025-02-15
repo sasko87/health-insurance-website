@@ -55,6 +55,8 @@ const LpPosts = () => {
         setPostsPerPage(3);
       } else if (window.innerWidth > 792 && window.innerWidth < 992) {
         setPostsPerPage(2);
+      } else if (window.innerWidth < 600) {
+        setPostsPerPage(1);
       }
     };
 

@@ -1,4 +1,6 @@
 .partnersLogo {
+  flex: 1;
+  min-width: 190px;
   max-width: 220px;
   width: 100%;
   height: 80px;
@@ -13,8 +15,8 @@
   justify-content: space-evenly;
   align-items: center;
   height: 30vh;
-  gap: 30px;
   background-color: #fff;
+  min-height: fit-content;
 }
 
 .partnersLogo:hover {
@@ -22,5 +24,33 @@
   filter: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .partners {
+    width: 75%;
+    margin: 20px auto;
+  }
+  .partnersLogo {
+    min-width: 190px;
+    max-width: 400px;
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .partners {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .partnersLogo {
+    margin: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .partnersLogo {
+    min-width: 100px;
+    max-width: 145px;
+    margin: 20px;
+    height: 60px;
+  }
 }

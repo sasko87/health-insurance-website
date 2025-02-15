@@ -6,6 +6,7 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  z-index: 10;
 }
 
 .custom-shape-divider-bottom-1739106416 svg {
@@ -22,7 +23,7 @@
 .hero {
   display: flex;
   align-items: center;
-  flex: 1;
+
   flex-direction: row;
   gap: 70px;
   background-color: #205346;

@@ -1,3 +1,36 @@
+.custom-shape-divider-bottom-1739106416 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 10;
+}
+
+.custom-shape-divider-bottom-1739106416 svg {
+  position: relative;
+  display: block;
+  width: calc(161% + 1.5px);
+  height: 120px;
+}
+
+.custom-shape-divider-bottom-1739106416 .shape-fill {
+  fill: #f8ecde;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 70px;
+  background-color: #205346;
+  padding: 0 40px;
+  height: 90vh;
+  position: relative;
+}
+
 .heroLeft {
   align-self: flex-end;
   width: 48%;
@@ -51,5 +84,71 @@
 
   .heroImg {
     height: 65vh;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .titles {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .titles h1 {
+    font-size: 58px;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+
+  .titles p {
+    margin-bottom: 50px;
+  }
+  .heroLeft {
+    display: none;
+  }
+
+  .hero {
+    background: url("../../assets/family-hero.png") #205346 no-repeat;
+    background-blend-mode: multiply;
+    background-position: bottom left;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+  .titles {
+    width: 80%;
+  }
+  .plant {
+    right: 60px;
+    right: 2px;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .titles {
+    margin: 10px auto;
+  }
+  .titles h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  .titles p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .buttonContainer {
+    text-align: center;
   }
 }

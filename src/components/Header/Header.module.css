@@ -40,3 +40,16 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mainNav {
+    display: none;
+  }
+  .mobileNav {
+    display: inline-block;
+  }
+}

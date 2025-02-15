@@ -13,6 +13,10 @@
   font-size: 18px;
 }
 
+.question p {
+  margin-right: 60px;
+}
+
 .question:hover {
   color: #205346;
 }
@@ -22,13 +26,19 @@
   font-weight: bold;
 }
 .faqContainer {
-  width: 800px;
-  margin: 0 auto;
+  width: 75%;
+  margin: 40px auto;
 }
 
 .answer p {
   margin-top: 0px;
   margin-bottom: 25px;
-  width: 760px;
+  width: 90%;
   font-size: 18px;
+}
+
+@media screen and (max-width: 993px) {
+  .faqContainer {
+    width: 100%;
+  }
 }
