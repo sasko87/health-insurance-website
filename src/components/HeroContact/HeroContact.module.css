@@ -1,10 +1,62 @@
+.custom-shape-divider-bottom-1739106416 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 10;
+}
+
+.custom-shape-divider-bottom-1739106416 svg {
+  position: relative;
+  display: block;
+  width: calc(161% + 1.5px);
+  height: 120px;
+}
+
+.custom-shape-divider-bottom-1739106416 .shape-fill {
+  fill: #f8ecde;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+
+  flex-direction: row;
+  gap: 70px;
+  background-color: #205346;
+  padding: 0 40px;
+  height: 90vh;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 58px;
+  line-height: 60px;
+  color: #fdfefe;
+  font-weight: bold;
+}
+
+.hero h3 {
+  font-size: 35px;
+  line-height: 40px;
+  color: #fdfefe;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 120%;
+  color: #b0c1b6;
+}
+
 .titles {
   width: 45%;
   align-self: flex-start;
   align-self: flex-start;
   margin-top: auto;
   margin-bottom: auto;
-  min-width: 400px;
 }
 
 .heroImg {
@@ -13,4 +65,62 @@
 
 .heroImg img {
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .titles {
+    margin-top: 120px;
+  }
+
+  .titles h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .titles {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .heroImg {
+    display: none;
+  }
+
+  .hero {
+    background: url("../../assets/contact-us.png") #205346 no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+  .titles {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titles {
+    margin: auto;
+  }
+  .titles h2 {
+    margin-bottom: 20px;
+  }
+
+  .titles p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titles h2 {
+    font-size: 30px;
+  }
 }
