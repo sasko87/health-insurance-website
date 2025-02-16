@@ -7,7 +7,7 @@ const BlogPosts = () => {
   return (
     <section className={classes.blogPosts}>
       {posts.map((post) => (
-        <BlogPostCard data={post} className="blogPostCard" />
+        <BlogPostCard data={post} />
       ))}
       ;
     </section>

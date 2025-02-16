@@ -2,45 +2,45 @@ import React from "react";
 import Doctor from "../../assets/doctor.jpg";
 import Capsuls from "../../assets/gel-capsules.jpg";
 import Health from "../../assets/health.jpg";
-import { posts } from "../../data/blog";
+
 import classes from "./LpPosts.module.css";
+
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import BlogPostCard from "../BlogPostCard/BlogPostCard";
 
 const LpPosts = () => {
-  // const posts = [
-  //   {
-  //     icon: Doctor,
-  //     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  //     content:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
-  //   },
-  //   {
-  //     icon: Capsuls,
-  //     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  //     content:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
-  //   },
-  //   {
-  //     icon: Health,
-  //     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  //     content:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
-  //   },
-  //   {
-  //     icon: Doctor,
-  //     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  //     content:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
-  //   },
-  //   {
-  //     icon: Health,
-  //     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  //     content:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
-  //   },
-  // ];
+  const posts = [
+    {
+      icon: Doctor,
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
+    },
+    {
+      icon: Capsuls,
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
+    },
+    {
+      icon: Health,
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
+    },
+    {
+      icon: Doctor,
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
+    },
+    {
+      icon: Health,
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare libero turpis, non commodo libero cursus maximus. Integer sagittis risus leo, eget rutrum risus lacinia at. Suspendisse aliquet ut purus eget rutrum. Curabitur et erat vel magna posuere congue. Praesent imperdiet felis vel neque consequat, a pulvinar tellus dapibus. Donec non consectetur est, quis auctor urna. Donec eget quam imperdiet, egestas tortor quis, venenatis massa. Quisque vehicula a erat vitae semper. Quisque eget sapien euismod dui condimentum ullamcorper sit amet aliquam magna. Donec in porta tortor. Morbi tincidunt nisi vel lectus facilisis, quis consectetur nisi iaculis. Fusce auctor pretium ex, nec mollis augue. Donec bibendum finibus dignissim. Nunc quis convallis nibh, eget condimentum leo. Maecenas in enim sed nibh congue consectetur sed aliquam erat. Vivamus risus quam, semper et tincidunt vel, vestibulum eget metus.",
+    },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [postsPerPage, setPostsPerPage] = useState(4);
@@ -81,9 +81,9 @@ const LpPosts = () => {
     }
   };
 
-  // const textLength = (text, maxLength) => {
-  //   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-  // };
+  const textLength = (text, maxLength) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  };
 
   return (
     <>
@@ -105,17 +105,12 @@ const LpPosts = () => {
             {posts
               .slice(currentIndex, currentIndex + postsPerPage)
               .map((post, index) => (
-                <BlogPostCard
-                  data={post}
-                  key={index}
-                  className={"lpPostsContainer"}
-                />
-                // <div key={index} className={classes.lpPostsContainer}>
-                //   <img src={post.image} alt="" className={classes.postImage} />
-                //   <h2>{post.title}</h2>
-                //   <p>{textLength(post.content, 150)}</p>
-                //   <div style={{ textAlign: "center", marginTop: 40 }}></div>
-                // </div>
+                <div key={index} className={classes.LpPostsContainer}>
+                  <img src={post.icon} alt="" className={classes.postImage} />
+                  <h2>{post.title}</h2>
+                  <p>{textLength(post.content, 150)}</p>
+                  <div style={{ textAlign: "center", marginTop: 40 }}></div>
+                </div>
               ))}
           </div>
 

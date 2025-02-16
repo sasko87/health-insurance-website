@@ -1,8 +1,10 @@
-/* .lpPostsContainer {
+.lpPostsContainer {
+  /* width: 18%; */
+
   cursor: pointer;
   display: flex;
   flex-direction: column;
-} */
+}
 
 .lpPosts {
   gap: 40px;
@@ -11,12 +13,12 @@
   margin-bottom: 0;
 }
 
-/* .lpPostsContainer img {
+.postImage {
   max-width: 250px;
   width: 100%;
   height: 200px;
   border-radius: 15px;
-} */
+}
 
 .lpPostsSectionHeader {
   font-size: 40px;
@@ -55,7 +57,7 @@
   margin: 20px;
 }
 
-/* @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .lpPostsContainer img {
     height: 150px;
   }
@@ -69,7 +71,7 @@
   .postImage {
     max-width: 100%;
   }
-} */
+}
 
 @media only screen and (max-width: 792px) {
   .carousel {
