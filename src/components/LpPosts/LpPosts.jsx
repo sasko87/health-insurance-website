@@ -81,9 +81,9 @@ const LpPosts = () => {
     }
   };
 
-  const textLength = (text, maxLength) => {
-    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-  };
+  // const textLength = (text, maxLength) => {
+  //   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  // };
 
   return (
     <>

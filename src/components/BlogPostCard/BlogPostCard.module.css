@@ -48,6 +48,7 @@
 
 .lpPostsContainer .imgContainer {
   margin-bottom: 0;
+  width: fit-content;
 }
 
 .lpPostsContainer img {
