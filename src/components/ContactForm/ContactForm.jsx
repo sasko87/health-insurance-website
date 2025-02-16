@@ -6,9 +6,51 @@ import Button from "../Button/Button";
 
 const ContactForm = ({ damage }) => {
   const [isActive, setIsActive] = useState("");
+  const [data, setData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [successMessage, setSuccessMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setData((prevData) => ({
+      ...prevData,
+      [name]: value, //go zima imeto od inputot
+    }));
+  };
 
   const handleType = (type) => {
     setIsActive(type);
+  };
+
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setSuccessMessage(data.message);
+        setData({
+          fullName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      const errorData = await response.json();
+      setErrorMessage(errorData.error);
+    }
   };
   return (
     <section className={classes.contact}>
@@ -51,15 +93,36 @@ const ContactForm = ({ damage }) => {
             />
           </div>
         )}
-        <Input type="text" name="name" id="name" placeholder="Име" />
+        <Input
+          type="text"
+          name="fullName"
+          id="name"
+          placeholder="Име"
+          value={data.fullName}
+          onChange={handleInputChange}
+        />
         <Input
           type="number"
-          name="number"
-          id="number"
+          name="phone"
+          id="phone"
           placeholder="Телефонски број"
+          value={data.phone}
+          onChange={handleInputChange}
         />
-        <Input type="email" name="email" id="email" placeholder="E-mail" />
-        <Textarea placeholder="Твоја порака" />
+        <Input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          value={data.email}
+          onChange={handleInputChange}
+        />
+        <Textarea
+          placeholder="Твоја порака"
+          name="message"
+          value={data.message}
+          onChange={handleInputChange}
+        />
         {damage && (
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <p>Прикачи документ</p>
@@ -76,7 +139,36 @@ const ContactForm = ({ damage }) => {
             </span>
           </div>
         )}
-        <Button style={{ width: "30%", alignSelf: "flex-end" }}>Прати</Button>
+        {successMessage && (
+          <p
+            style={{
+              textAlign: "center",
+              marginTop: 5,
+              fontSize: "20px",
+              color: "#205346",
+            }}
+          >
+            {successMessage}
+          </p>
+        )}
+        {errorMessage && (
+          <p
+            style={{
+              textAlign: "center",
+              marginTop: 5,
+              fontSize: "20px",
+              color: "red",
+            }}
+          >
+            {errorMessage}
+          </p>
+        )}
+        <Button
+          style={{ width: "30%", alignSelf: "flex-end" }}
+          onClick={handleSendMessage}
+        >
+          Прати
+        </Button>
       </form>
     </section>
   );
