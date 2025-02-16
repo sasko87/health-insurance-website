@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 
 const ContactForm = ({ damage }) => {
   const [isActive, setIsActive] = useState("");
+  const [file, setFile] = useState(null);
   const [data, setData] = useState({
     fullName: "",
     phone: "",
@@ -22,6 +23,18 @@ const ContactForm = ({ damage }) => {
       [name]: value, //go zima imeto od inputot
     }));
   };
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const formData = new FormData();
+  formData.append("fullName", data.fullName);
+  formData.append("phone", data.phone);
+  formData.append("email", data.email);
+  formData.append("message", data.message);
+  if (file) {
+    formData.append("file", file); // Append the selected file
+  }
 
   const handleType = (type) => {
     setIsActive(type);
@@ -32,10 +45,8 @@ const ContactForm = ({ damage }) => {
     try {
       const response = await fetch("/api/send-contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+
+        body: formData,
       });
       if (response.ok) {
         const data = await response.json();
@@ -46,6 +57,7 @@ const ContactForm = ({ damage }) => {
           email: "",
           message: "",
         });
+        setFile(null);
       }
     } catch (error) {
       const errorData = await response.json();
@@ -135,6 +147,7 @@ const ContactForm = ({ damage }) => {
                 id="atached"
                 name="atached"
                 className={classes.attachedFiles}
+                onChange={handleFileChange}
               />
             </span>
           </div>
