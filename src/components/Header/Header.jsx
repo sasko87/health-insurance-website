@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 
 const Header = () => {
   const [mobileNav, setMobileNav] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,6 +24,7 @@ const Header = () => {
   const handleMobileNav = () => {
     setMobileNav((prevNav) => !prevNav);
   };
+
   const buttonNavigate = (e) => {
     e.preventDefault();
     navigate("/prijavi-steta");

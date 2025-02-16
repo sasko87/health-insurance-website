@@ -59,7 +59,8 @@
   top: 10vh;
   z-index: 50;
   position: fixed;
-  transition: all 0.5s;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .mobileNavItems {
@@ -70,7 +71,6 @@
   gap: 25px;
   font-size: 20px;
   margin-top: 40px;
-  transition: all 0.5s;
 }
 
 .closeIcon {
@@ -98,5 +98,15 @@
   }
   .mobileNav {
     display: inline-block;
+    animation: slideIn 0.5s forwards;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
