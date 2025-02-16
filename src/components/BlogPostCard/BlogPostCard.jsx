@@ -1,10 +1,9 @@
 import React from "react";
-import dentist from "../../assets/dentist.jpg";
 import { Link } from "react-router-dom";
 import classes from "./BlogPostCard.module.css";
 import { useNavigate } from "react-router-dom";
 
-const BlogPostCard = ({ data }) => {
+const BlogPostCard = ({ data, className }) => {
   const navigate = useNavigate();
   const handlePost = (id) => {
     navigate(`/blog/post/${id}`);
@@ -13,7 +12,10 @@ const BlogPostCard = ({ data }) => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
   return (
-    <div className={classes.blogPostCard} onClick={() => handlePost(data.id)}>
+    <div
+      className={classes[`${className}`]}
+      onClick={() => handlePost(data.id)}
+    >
       <div className={classes.imgContainer}>
         <img src={data.image} alt="" />
       </div>

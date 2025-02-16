@@ -142,6 +142,11 @@ const ContactForm = ({ damage }) => {
               <label htmlFor="atached" className={classes.attachLabel}>
                 Прикачи
               </label>
+              {file ? (
+                <span style={{ marginLeft: 10 }}>Прикачивте документ </span>
+              ) : (
+                ""
+              )}
               <input
                 type="file"
                 id="atached"
